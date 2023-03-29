@@ -27,6 +27,7 @@ export function App() {
   }
 
   function createTask(title: string) {
+    if (!title) return;
     const newTask = {
       title: title,
       id: tasks.length + 1,

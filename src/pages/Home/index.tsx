@@ -58,12 +58,15 @@ export default function Home({ tasks, createTask, removeTask, toggleTask }: Home
           <div className={styles.taskContent}>
 
 
-            <>
-              <div className={styles.borderLine}></div>
-              <div className={styles.imageContainer}><img src={clipboard} /></div>
-              <h3>Você ainda não tem tarefas cadastradas</h3>
-              <h6>Crie tarefas e organize seus itens a fazer</h6>
-            </>
+
+            <div className={styles.borderLine}>
+              {tasks.length < 1 && <div>
+                <div className={styles.imageContainer}><img src={clipboard} /></div>
+                <h3>Você ainda não tem tarefas cadastradas</h3>
+                <h6>Crie tarefas e organize seus itens a fazer</h6>
+              </div>
+              }
+            </div>
 
             <div>
               {
